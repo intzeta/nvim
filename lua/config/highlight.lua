@@ -1,0 +1,6 @@
+vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg = NONE, fg = "#3c3836"})
+vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg = NONE, fg = "#3c3836"})
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = NONE, fg = "#3c3836"})
+vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = NONE, fg = "#b8bb26"})
+vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = NONE, fg = "#b8bb26"})
+vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = NONE, fg = "#b8bb26"})
