@@ -7,8 +7,8 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+vim.opt.relativenumber = false
+vim.opt.signcolumn = "yes:1"
 
 vim.opt.termguicolors = true
 vim.o.background = "dark"
