@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
+
 vim.opt.clipboard:append("unnamedplus")
+vim.opt.undofile = true
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -18,6 +20,8 @@ vim.opt.smartindent = true
 vim.opt.backup = false
 vim.opt.swapfile = false
 vim.opt.showcmd = true
+vim.opt.showmode = false
+vim.opt.cmdheight = 0
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.inccommand = "split"
@@ -33,3 +37,4 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = "cursor"
 vim.opt.formatoptions:append({ "r" })
+vim.o.fillchars = "eob: "

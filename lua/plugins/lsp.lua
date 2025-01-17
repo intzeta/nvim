@@ -20,10 +20,11 @@ return{
 
       mason_lspconfig.setup({
         ensure_installed = {
-          "lua_ls",
-          "rust_analyzer",
+          "asm_lsp",
           "clangd",
           "cmake",
+          "lua_ls",
+          "rust_analyzer",
           "jsonls",
           "texlab",
         },
@@ -67,6 +68,13 @@ return{
         capabilities = capabilities,
         on_attach = on_attach,
       })
+
+      lspconfig["asm_lsp"].setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+        filetypes = { "asm", },
+      })
+
     end,
   },
   {

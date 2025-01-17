@@ -9,6 +9,7 @@ return {
 					"json",
 					"cpp",
 					"c",
+          "asm",
 				},
 				auto_install = false,
 				query_linter = {
@@ -19,6 +20,10 @@ return {
 				highlight = {
 					enable = true,
 				},
+        indent = {
+          enable = true,
+          disable = { "asm", },
+        }
 			})
 		end,
 	},

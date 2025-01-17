@@ -1,9 +1,12 @@
 return{
-	{
-		"echasnovski/mini.hipatterns",
-		event = "BufReadPre",
-		opts = {},
-	},
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require("colorizer").setup({
+        '*',
+      })
+    end,
+  },
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",

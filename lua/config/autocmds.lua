@@ -12,3 +12,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     }, bufnr)
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "asm",
+  callback = function()
+    vim.opt_local.indentexpr = ""
+  end,
+})
+
+vim.cmd [[
+  highlight! link StatusLine Normal
+  highlight! link StatusLineNC Normal
+]]
