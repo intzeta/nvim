@@ -20,6 +20,14 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.api.nvim_create_augroup("jdh8_ft", { clear = true })
+
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = "*.asm",
+  command = "set filetype=jdh8",
+  group = "jdh8_ft",
+})
+
 vim.cmd [[
   highlight! link StatusLine Normal
   highlight! link StatusLineNC Normal

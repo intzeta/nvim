@@ -20,8 +20,12 @@ return {
       invert_tabline = false,
       invert_intend_guides = false,
       inverse = true, -- invert background for search, diffs, statuslines and errors
-      contrast = "hard", -- can be "hard", "soft" or empty string
-      palette_overrides = {},
+      contrast = "", -- can be "hard", "soft" or empty string
+      palette_overrides = {
+        dark_aqua = "#3e4934",
+        dark_green = "#5a633a",
+        dark_red = "#792329",
+      },
       overrides = {},
       dim_inactive = false,
       transparent_mode = false,

@@ -55,11 +55,11 @@ return{
           "-j=4",
           "--inlay-hints",
           "--header-insertion-decorators",
-          "--function-arg-placeholders",
+          "--function-arg-placeholders=0",
           "--completion-style=detailed",
         },
         filetypes = { "c", "cpp", "objc", "objcpp" },
-        -- root_dir = require("lspconfig").util.root_pattern("src"),
+        root_dir = require("lspconfig").util.root_pattern("src"),
         capabilities = capabilities,
         on_attach = on_attach,
       })

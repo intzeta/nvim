@@ -7,7 +7,7 @@ local colors = {
   blue         = '#83a598',
   yellow       = '#fe8019',
   gray         = '#a89984',
-  darkgray     = '#3c3836',
+  darkgray     = '#282828',
   lightgray    = '#504945',
   inactivegray = '#7c6f64',
   transparent = nil,
@@ -60,14 +60,9 @@ return{
         sections = {
           lualine_a = {'mode'},
           lualine_b = {'branch', 'diff', 'diagnostics'},
-          lualine_c = {
-            'filename',
-            function()
-              return vim.fn['nvim_treesitter#statusline'](180)
-            end
-          },
+          lualine_c = {},
           lualine_x = {},
-          lualine_y = {'filetype', 'progress'},
+          lualine_y = {'filename'},
           lualine_z = {'location'}
           },
         }
