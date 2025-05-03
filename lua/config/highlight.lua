@@ -11,3 +11,6 @@ vim.api.nvim_set_hl(0, "DiagnosticSignInfo", {bg = NONE, fg = "#83a598"})
 vim.api.nvim_set_hl(0, "DiagnosticSignHint", {bg = NONE, fg = "#8ec07c"})
 vim.api.nvim_set_hl(0, 'SignColumn', {fg = NONE, bg = NONE})
 
+
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282828",})
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#282828", fg = "#3c3836" })

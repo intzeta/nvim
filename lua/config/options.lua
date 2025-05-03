@@ -9,7 +9,7 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes:1"
 
 vim.opt.termguicolors = true
@@ -20,8 +20,8 @@ vim.opt.smartindent = true
 vim.opt.backup = false
 vim.opt.swapfile = false
 vim.opt.showcmd = true
-vim.opt.showmode = false
-vim.opt.cmdheight = 0
+vim.opt.showmode = true
+vim.opt.cmdheight = 1
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.inccommand = "split"

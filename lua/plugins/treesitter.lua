@@ -10,6 +10,9 @@ return {
 					"cpp",
 					"c",
           "asm",
+          "glsl",
+          "make",
+          "markdown",
 				},
 				auto_install = false,
 				query_linter = {

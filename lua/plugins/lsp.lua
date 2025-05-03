@@ -22,10 +22,9 @@ return{
         ensure_installed = {
           "asm_lsp",
           "clangd",
+          "glsl_analyzer",
           "cmake",
           "lua_ls",
-          "rust_analyzer",
-          "jsonls",
           "texlab",
         },
         automatic_installation = true,
@@ -44,6 +43,32 @@ return{
       local cmp_nvim_lsp = require("cmp_nvim_lsp")
       local capabilities = cmp_nvim_lsp.default_capabilities()
 
+      vim.filetype.add({
+        extension = {
+          vs = "glsl",
+          fs = "glsl",
+          gs = "glsl",
+          cms = "glsl",
+        },
+      })
+
+      vim.diagnostic.config({
+        virtual_text = {
+          prefix = "",
+          spacing = 0,
+          format = function(diagnostic)
+            return diagnostic.message
+          end,
+        },
+        float = {
+          source = "always",
+          border = "rounded",
+        },
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+      })
+
       lspconfig["clangd"].setup({
         cmd = {
           "/usr/bin/clangd",
@@ -53,13 +78,20 @@ return{
           "--pretty",
           "--header-insertion=never",
           "-j=4",
-          "--inlay-hints",
           "--header-insertion-decorators",
           "--function-arg-placeholders=0",
           "--completion-style=detailed",
         },
         filetypes = { "c", "cpp", "objc", "objcpp" },
         root_dir = require("lspconfig").util.root_pattern("src"),
+        capabilities = capabilities,
+        on_attach = on_attach,
+      })
+
+      lspconfig["glsl_analyzer"].setup({
+        cmd = { "glsl_analyzer" },
+        filetypes = { "glsl" },
+        root_dir = lspconfig.util.root_pattern(".git", "."),
         capabilities = capabilities,
         on_attach = on_attach,
       })
@@ -74,7 +106,6 @@ return{
         on_attach = on_attach,
         filetypes = { "asm", },
       })
-
     end,
   },
   {

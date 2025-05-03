@@ -33,6 +33,12 @@ return{
           builtin.find_files({
             no_ignore = false,
             hidden = true,
+
+            layout_config = {
+              prompt_position = "top",
+              preview_width = 0.6,
+            },
+            sorting_strategy = "ascending",
           })
         end,
         desc = "Lists files in your current working directory, respects .gitignore",
@@ -113,6 +119,7 @@ return{
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+        file_ignore_patterns = {"%.git/", "%.o", "%.cache/", "lib/"},
         mappings = {
           n = {},
         },
